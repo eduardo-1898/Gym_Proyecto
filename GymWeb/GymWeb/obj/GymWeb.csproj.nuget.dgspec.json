@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Eduardo\\source\\repos\\GymWeb\\GymWeb\\GymWeb.csproj": {}
+    "C:\\Users\\ManzurMQ\\OneDrive\\FIDELITAS\\Programación Avanzada en Web\\Proyecto\\GymWeb\\GymWeb\\GymWeb.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Eduardo\\source\\repos\\GymWeb\\GymWeb\\GymWeb.csproj": {
+    "C:\\Users\\ManzurMQ\\OneDrive\\FIDELITAS\\Programación Avanzada en Web\\Proyecto\\GymWeb\\GymWeb\\GymWeb.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Eduardo\\source\\repos\\GymWeb\\GymWeb\\GymWeb.csproj",
+        "projectUniqueName": "C:\\Users\\ManzurMQ\\OneDrive\\FIDELITAS\\Programación Avanzada en Web\\Proyecto\\GymWeb\\GymWeb\\GymWeb.csproj",
         "projectName": "GymWeb",
-        "projectPath": "C:\\Users\\Eduardo\\source\\repos\\GymWeb\\GymWeb\\GymWeb.csproj",
-        "packagesPath": "C:\\Users\\Eduardo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Eduardo\\source\\repos\\GymWeb\\GymWeb\\obj\\",
+        "projectPath": "C:\\Users\\ManzurMQ\\OneDrive\\FIDELITAS\\Programación Avanzada en Web\\Proyecto\\GymWeb\\GymWeb\\GymWeb.csproj",
+        "packagesPath": "C:\\Users\\ManzurMQ\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ManzurMQ\\OneDrive\\FIDELITAS\\Programación Avanzada en Web\\Proyecto\\GymWeb\\GymWeb\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Eduardo\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\ManzurMQ\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\sdk\\7.0.306\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -69,7 +64,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }
