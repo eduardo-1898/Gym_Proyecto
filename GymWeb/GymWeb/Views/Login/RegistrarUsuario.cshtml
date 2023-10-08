@@ -1,4 +1,5 @@
-﻿
+﻿@model GymWeb.Entities.UsuarioEnt
+
 @{
     ViewData["Title"] = "RegistrarUsuario";
     Layout = "~/Views/Shared/_Layout_Login.cshtml";
@@ -62,35 +63,38 @@
                     <h4 class="mb-2">Tu cambio comienza aquí 🚀</h4>
                     <p class="mb-4">Has que tus sueños se cumplan!</p>
 
-                    <form id="formAuthentication" class="mb-3" action="index.html" method="POST">
+                    @*  Inicio del form *@
+                    @using (Html.BeginForm("RegistrarUsuario", "Login", FormMethod.Post, new { @class = "pt-3" }))
+                    {
                         <div class="mb-3">
-                            <label for="NameUser" class="form-label">Nombre completo</label>
-                            <input type="text"
-                                   class="form-control"
-                                   id="NameUser"
-                                   name="NameUser"
-                                   placeholder="Ingrese su nombre completo"
-                                   autofocus />
+                            <label class="form-label" >Identificacion</label>
+                            @Html.TextBoxFor(m=> m.Identificacion, new {@class="form-control form-control-lg",@type="text",@placeholder="Identificacion"})
                         </div>
                         <div class="mb-3">
-                            <label for="email" class="form-label">Correo</label>
-                            <input type="text" class="form-control" id="email" name="email" placeholder="Ingrese su correo" />
+                            <label class="form-label" >Nombre Completo</label>
+                            @Html.TextBoxFor(m=> m.NombreCompleto, new {@class="form-control form-control-lg",@type="text",@placeholder="Nombre"})
+                        </div>
+                        <div class="mb-3">
+                            <label  class="form-label">Correo</label>
+                            @Html.TextBoxFor(m=> m.Correo, new {@class="form-control form-control-lg",@type="email",@placeholder="Correo Electronico"})
+                        </div>
+                        <div class="mb-3">
+                            <label  class="form-label">Telefono</label>
+                            @Html.TextBoxFor(m=> m.Telefono, new {@class="form-control form-control-lg",@type="text",@placeholder="Telefono"})
                         </div>
                         <div class="mb-3 form-password-toggle">
                             <label class="form-label" for="password">Contraseña</label>
                             <div class="input-group input-group-merge">
-                                <input type="password"
-                                       id="password"
-                                       class="form-control"
-                                       name="password"
-                                       placeholder="ingrese una contraseña"
-                                       aria-describedby="Contraseña" />
+                                @Html.TextBoxFor(m=> m.contrasenna, new {@class="form-control form-control-lg",@type="password",@placeholder="Contraseña"})
                                 <span class="input-group-text cursor-pointer"><i class="bx bx-hide"></i></span>
                             </div>
                         </div>
 
-                        <button class="btn btn-primary d-grid w-100" type="submit">Registrar</button>
-                    </form>
+                        
+                        <input type="submit" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" value="Registrarse">
+
+                    }
+                    @*  Fin del form *@
 
                     <p class="text-center">
                         ¿Ya tienes una cuenta? <a href="@Url.Action("Login","Login")" class="text-primary">Iniciar Sesion</a> <br />
