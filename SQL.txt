@@ -1,0 +1,15 @@
+CREATE PROCEDURE [dbo].[RegistrarUsuario]
+	@Identificacion varchar(255),
+	@NombreCompleto varchar(100),
+	@Correo		varchar(255),
+	@Telefono		int,
+	@Contrasenna	varchar(255)
+	
+AS
+BEGIN
+	
+	INSERT INTO [dbo].[Usuarios] (Identificacion,NombreCompleto,Correo,Telefono,Contrasenna)
+    VALUES (@Identificacion, @NombreCompleto, @Correo, @Telefono, @Contrasenna)
+
+END
+GO
