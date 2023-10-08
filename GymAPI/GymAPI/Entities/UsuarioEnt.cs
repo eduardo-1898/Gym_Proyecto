@@ -25,8 +25,6 @@
     }
 
 
-
-
     public class UsuarioEntRespuesta
     {
         public int Codigo { get; set; }

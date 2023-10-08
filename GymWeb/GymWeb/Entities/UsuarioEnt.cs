@@ -26,4 +26,15 @@
         public bool estado { get; set; }
 
     }
+
+    public class UsuarioEntRespuesta
+    {
+        public int Codigo { get; set; }
+        public string Mensaje { get; set; } = string.Empty;
+        public UsuarioEnt? Objeto { get; set; } = null;
+        public List<UsuarioEnt> Objetos { get; set; } = new List<UsuarioEnt>();
+        public bool Resultado { get; set; }
+    }
+
+
 }

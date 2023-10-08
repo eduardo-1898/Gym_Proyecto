@@ -22,10 +22,6 @@ namespace GymAPI.Controllers
             _connection = _configuration.GetConnectionString("DefaultConnection");
         }
 
-
-
-
-
         [HttpPost]
         [Route("InicioSesion")]
         public IActionResult InicioSesion(UsuarioEnt entidad)
@@ -33,10 +29,12 @@ namespace GymAPI.Controllers
             var resultado = new UsuarioEnt();
             var respuesta = new UsuarioEntRespuesta();
 
+
+
             try
             {
 
-                using (var connection = new SqlConnection(_connection))
+                using (var connection = new SqlConnection(_configuration.GetConnectionString("DefaultConnection")))
                 {
 
                     resultado = connection.Query<UsuarioEnt>("ConsultarUsuario",
@@ -71,6 +69,11 @@ namespace GymAPI.Controllers
         }
 
 
+
+
+
+
+
         [HttpPost]
         [Route("RegistrarUsuario")]
 
@@ -103,9 +106,10 @@ namespace GymAPI.Controllers
                 return BadRequest(ex.Message);
             }
 
+            //}
+
+
+
         }
-
-
-
     }
 }

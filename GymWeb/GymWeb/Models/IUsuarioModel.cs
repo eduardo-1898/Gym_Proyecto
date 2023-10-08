@@ -8,7 +8,7 @@ namespace GymWeb.Models
 
 
 
-        public UsuarioEnt? IniciarSesion(UsuarioEnt entidad);
+        public UsuarioEntRespuesta? InicioSesion(UsuarioEnt entidad);
 
         public int RegistrarUsuario(UsuarioEnt entidad);
 
