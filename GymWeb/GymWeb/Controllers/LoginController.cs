@@ -9,7 +9,7 @@ namespace GymWeb.Controllers
             return View();
         }
 
-        public IActionResult Registrar()
+        public IActionResult RegistrarUsuario()
         {
             return View();
         }

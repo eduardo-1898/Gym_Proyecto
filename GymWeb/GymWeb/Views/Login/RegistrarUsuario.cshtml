@@ -1,14 +1,17 @@
-﻿@{
-    ViewData["Title"] = "Login";
+﻿
+@{
+    ViewData["Title"] = "RegistrarUsuario";
     Layout = "~/Views/Shared/_Layout_Login.cshtml";
 }
+
+
 <div class="container-xxl">
     <div class="authentication-wrapper authentication-basic container-p-y">
         <div class="authentication-inner">
             <div class="card">
                 <div class="card-body">
                     <div class="app-brand justify-content-center">
-                        <a class="app-brand-link gap-2" asp-action="Index" asp-controller="Home">
+                        <a href="index.html" class="app-brand-link gap-2">
                             <span class="app-brand-logo demo">
                                 <svg width="25"
                                      viewBox="0 0 25 42"
@@ -52,53 +55,49 @@
                                     </g>
                                 </svg>
                             </span>
-                            <span class="app-brand-text demo text-body fw-bolder">Gym pro</span>
+                            <span class="app-brand-text demo text-body fw-bolder">Gym Pro</span>
                         </a>
                     </div>
-                    <h4 class="mb-2">Bienvenido a tu gimnasio de confianza! 👋</h4>
-                    <p class="mb-4">Favor ingresa tus credenciales para brindarte una mejor experiencia</p>
 
-                    <form id="formAuthentication" class="mb-3" asp-action="Index" asp-controller="Home">
+                    <h4 class="mb-2">Tu cambio comienza aquí 🚀</h4>
+                    <p class="mb-4">Has que tus sueños se cumplan!</p>
+
+                    <form id="formAuthentication" class="mb-3" action="index.html" method="POST">
                         <div class="mb-3">
-                            <label for="email" class="form-label">Correo</label>
+                            <label for="NameUser" class="form-label">Nombre completo</label>
                             <input type="text"
                                    class="form-control"
-                                   id="email"
-                                   name="email-username"
-                                   placeholder="Ingresa tu correo"
+                                   id="NameUser"
+                                   name="NameUser"
+                                   placeholder="Ingrese su nombre completo"
                                    autofocus />
                         </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Correo</label>
+                            <input type="text" class="form-control" id="email" name="email" placeholder="Ingrese su correo" />
+                        </div>
                         <div class="mb-3 form-password-toggle">
-                            <div class="d-flex justify-content-between">
-                                <label class="form-label" for="password">Contraseña</label>
-                                <a href="@Url.Action("RecuperarContrasenna","Login")" class="text-primary">Olvide mi contraseña</a> <br />
-                              
-                            </div>
+                            <label class="form-label" for="password">Contraseña</label>
                             <div class="input-group input-group-merge">
                                 <input type="password"
                                        id="password"
                                        class="form-control"
                                        name="password"
-                                       placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
-                                       aria-describedby="password" />
-                               
+                                       placeholder="ingrese una contraseña"
+                                       aria-describedby="Contraseña" />
                                 <span class="input-group-text cursor-pointer"><i class="bx bx-hide"></i></span>
-                                
                             </div>
                         </div>
-                        <div class="mb-3">
-                            <button class="btn btn-primary d-grid w-100" type="submit">Iniciar sesion</button>
-                        </div>
+
+                        <button class="btn btn-primary d-grid w-100" type="submit">Registrar</button>
                     </form>
 
                     <p class="text-center">
-                        ¿No tienes una cuenta? <a href="@Url.Action("RegistrarUsuario","Login")" class="text-primary">Registrarse</a> <br />
-                      
-
+                        ¿Ya tienes una cuenta? <a href="@Url.Action("Login","Login")" class="text-primary">Iniciar Sesion</a> <br />
                     </p>
                 </div>
             </div>
-
         </div>
     </div>
 </div>
+
