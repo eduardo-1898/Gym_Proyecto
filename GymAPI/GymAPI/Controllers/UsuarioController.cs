@@ -28,17 +28,11 @@ namespace GymAPI.Controllers
         {
             var resultado = new UsuarioEnt();
             var respuesta = new UsuarioEntRespuesta();
-
-
-
             try
             {
-
                 using (var connection = new SqlConnection(_configuration.GetConnectionString("DefaultConnection")))
                 {
-
                     resultado = connection.Query<UsuarioEnt>("ConsultarUsuario",
-
                         new { entidad.Correo, entidad.Contrasenna },
                         commandType: System.Data.CommandType.StoredProcedure).FirstOrDefault();
 
@@ -55,23 +49,14 @@ namespace GymAPI.Controllers
                     return Ok(respuesta);
                 }
 
-
             }
             catch (Exception)
             {
-
                 respuesta.Codigo = 3;
                 respuesta.Mensaje = "Se presentó un inconveniente";
                 return Ok(respuesta);
-
-
             }
         }
-
-
-
-
-
 
 
         [HttpPost]
@@ -81,13 +66,10 @@ namespace GymAPI.Controllers
         {
             try
             {
-
                 using (var context = new SqlConnection(_connection))
                 {
-
                     var datos = context.Execute("RegistrarUsuario", new
                     {
-
                         entidad.Identificacion,
                         entidad.NombreCompleto,
                         entidad.Telefono,
@@ -95,20 +77,12 @@ namespace GymAPI.Controllers
                         entidad.Contrasenna
                     }, commandType: CommandType.StoredProcedure);
                     return Ok(datos);
-
-
                 }
-
-
             }
             catch (Exception ex)
             {
                 return BadRequest(ex.Message);
             }
-
-            //}
-
-
 
         }
     }

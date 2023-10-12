@@ -10,6 +10,14 @@ builder.Services.AddSession();
 builder.Services.AddHttpClient();
 builder.Services.AddSingleton<IUsuarioModel, UsuarioModel>();
 builder.Services.AddHttpContextAccessor();
+
+
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(300);
+    options.Cookie.HttpOnly = true;
+    options.Cookie.IsEssential = true;
+});
 //builder.Services.AddScoped<IBitacoraModel, BitacoraModel>();
 var app = builder.Build();
 

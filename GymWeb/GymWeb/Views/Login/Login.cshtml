@@ -64,7 +64,7 @@
                 {
                     <h1>Inicie Sesión</h1>
                     <div class="mb-3">
-                        <label for="usuario" class="form-label">Usuario</label>
+                        <label for="usuario" class="form-label">Correo electronico</label>
                         @Html.TextBoxFor(x => x.Correo, new { @class = "form-control" })
                     </div>
                     <div class="mb-3">
@@ -86,6 +86,16 @@
 
             </div>
         </div>
-
     </div>
 </div>
+
+@if (ViewBag.Mensaje != null)
+{
+    <script>
+        Swal.fire({
+            icon: 'error',
+            title: 'Ha ocurrido un error..',
+            html: '@ViewBag.Mensaje.ToString()'
+        })
+    </script>
+}
