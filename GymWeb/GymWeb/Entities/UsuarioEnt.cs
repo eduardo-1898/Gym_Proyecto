@@ -3,7 +3,7 @@
     public class UsuarioEnt
     {
 
-        public int IdUsuario { get; set; }
+        public long IdUsuario { get; set; }
 
         public string Identificacion { get; set; } = string.Empty;
 
@@ -24,6 +24,8 @@
 
         public DateTime FechaCaducidad { get; set; }
         public bool estado { get; set; }
+
+        public string contrasennaTemporal { get; set; } = string.Empty;
 
     }
 

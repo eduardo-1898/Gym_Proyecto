@@ -13,9 +13,9 @@ namespace GymWeb.Models
         public int RegistrarUsuario(UsuarioEnt entidad);
 
 
-        public int RecuperarCuenta(UsuarioEnt entidad);
+        public int RecuperarContrasenna(UsuarioEnt entidad);
 
-
+        public int CambiarClaveCuenta(UsuarioEnt entidad);
 
 
 

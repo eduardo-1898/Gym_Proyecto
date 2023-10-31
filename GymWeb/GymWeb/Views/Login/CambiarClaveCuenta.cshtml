@@ -1,11 +1,14 @@
 ﻿@model GymWeb.Entities.UsuarioEnt
+
 @{
     ViewData["Title"] = "RegistrarUsuario";
     Layout = "~/Views/Shared/_Layout_Login.cshtml";
 }
+
+
 <div class="container-xxl">
     <div class="authentication-wrapper authentication-basic container-p-y">
-        <div class="authentication-inner py-4">
+        <div class="authentication-inner">
             <div class="card">
                 <div class="card-body">
                     <div class="app-brand justify-content-center">
@@ -56,25 +59,31 @@
                             <span class="app-brand-text demo text-body fw-bolder">Gym Pro</span>
                         </a>
                     </div>
-                    <h4 class="mb-2">Olvidate tu contraseña? 🔒</h4>
-                    <p class="mb-4">Ingresa tu correo electrónico para indicarte los pasos para recuperar tu contraseña</p>
-                    @using (Html.BeginForm("RecuperarContrasenna", "Login", FormMethod.Post, new { @class = "text-start" }))
-                    {
 
-                        <div class="mb-3">
-                            <label for="usuario" class="form-label">Correo Electrónico</label>
-                            @Html.TextBoxFor(x => x.Correo, new { @class = "form-control" })
+                    <h4 class="mb-2">Tu cambio comienza aquí 🚀</h4>
+                    <p class="mb-4">Has que tus sueños se cumplan!</p>
+
+                    @*  Inicio del form *@
+                    @using (Html.BeginForm("CambiarClaveCuenta", "Login", FormMethod.Post, new { @class = "pt-3" }))
+                    {
+                        @ViewBag.MensajePantalla
+
+                        @Html.HiddenFor(m => m.IdUsuario)
+
+                        <div class="form-group">
+                            @Html.TextBoxFor(m => m.contrasennaTemporal, new { @class="form-control form-control-lg", @type="text", @placeholder="Contraseña Temporal" })
+                        </div>
+                        <div class="form-group">
+                            @Html.TextBoxFor(m => m.contrasenna, new { @class="form-control form-control-lg", @type="text", @placeholder="Contraseña Nueva"})
                         </div>
 
-                        <input type="submit" class="btn btn-primary d-grid w-100" value="Enviar Link"> <br />
+
+                        <input type="submit" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" value="Cambiar Contraseña">
+
                     }
-                    <div class="text-center">
+                    @*  Fin del form *@
 
-
-                        <a href="@Url.Action("Login","Login")" class="text-primary">Atrás</a> <br />
-
-                    </div>
-
+                   
                 </div>
             </div>
         </div>

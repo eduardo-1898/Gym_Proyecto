@@ -18,7 +18,7 @@
         public DateTime FechaCaducidad { get; set; }
         public bool Estado { get; set; }
 
-
+        public string contrasennaTemporal { get; set; } = string.Empty;
 
 
 
