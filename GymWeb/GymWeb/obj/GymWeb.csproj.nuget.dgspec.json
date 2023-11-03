@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Eduardo\\source\\repos\\GymWeb\\GymWeb\\GymWeb.csproj": {}
+    "C:\\Users\\Eduardo\\Documents\\GitHub\\Gym_Proyecto\\GymWeb\\GymWeb\\GymWeb.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Eduardo\\source\\repos\\GymWeb\\GymWeb\\GymWeb.csproj": {
+    "C:\\Users\\Eduardo\\Documents\\GitHub\\Gym_Proyecto\\GymWeb\\GymWeb\\GymWeb.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Eduardo\\source\\repos\\GymWeb\\GymWeb\\GymWeb.csproj",
+        "projectUniqueName": "C:\\Users\\Eduardo\\Documents\\GitHub\\Gym_Proyecto\\GymWeb\\GymWeb\\GymWeb.csproj",
         "projectName": "GymWeb",
-        "projectPath": "C:\\Users\\Eduardo\\source\\repos\\GymWeb\\GymWeb\\GymWeb.csproj",
+        "projectPath": "C:\\Users\\Eduardo\\Documents\\GitHub\\Gym_Proyecto\\GymWeb\\GymWeb\\GymWeb.csproj",
         "packagesPath": "C:\\Users\\Eduardo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Eduardo\\source\\repos\\GymWeb\\GymWeb\\obj\\",
+        "outputPath": "C:\\Users\\Eduardo\\Documents\\GitHub\\Gym_Proyecto\\GymWeb\\GymWeb\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -48,6 +48,10 @@
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[6.0.16, )"
+            },
+            "Stripe.net": {
+              "target": "Package",
+              "version": "[43.0.0, )"
             }
           },
           "imports": [
