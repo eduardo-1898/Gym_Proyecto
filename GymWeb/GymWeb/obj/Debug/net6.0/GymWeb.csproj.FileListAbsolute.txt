@@ -673,3 +673,4 @@ C:\Users\Eduardo\Documents\GitHub\Gym_Proyecto\GymWeb\GymWeb\obj\Debug\net6.0\re
 C:\Users\Eduardo\Documents\GitHub\Gym_Proyecto\GymWeb\GymWeb\obj\Debug\net6.0\GymWeb.pdb
 C:\Users\Eduardo\Documents\GitHub\Gym_Proyecto\GymWeb\GymWeb\obj\Debug\net6.0\GymWeb.genruntimeconfig.cache
 C:\Users\Eduardo\Documents\GitHub\Gym_Proyecto\GymWeb\GymWeb\obj\Debug\net6.0\ref\GymWeb.dll
+C:\Users\Eduardo\Documents\GitHub\Gym_Proyecto\GymWeb\GymWeb\bin\Debug\net6.0\Stripe.net.dll

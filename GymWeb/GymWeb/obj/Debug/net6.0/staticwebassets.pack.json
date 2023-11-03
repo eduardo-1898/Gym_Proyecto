@@ -25,6 +25,10 @@
       "PackagePath": "staticwebassets\\assets\\img\\avatars\\7.png"
     },
     {
+      "Id": "C:\\Users\\Eduardo\\Documents\\GitHub\\Gym_Proyecto\\GymWeb\\GymWeb\\wwwroot\\assets\\img\\avatars\\sin-foto.png",
+      "PackagePath": "staticwebassets\\assets\\img\\avatars\\sin-foto.png"
+    },
+    {
       "Id": "C:\\Users\\Eduardo\\Documents\\GitHub\\Gym_Proyecto\\GymWeb\\GymWeb\\wwwroot\\assets\\img\\backgrounds\\18.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\backgrounds\\18.jpg"
     },
@@ -327,6 +331,22 @@
     {
       "Id": "C:\\Users\\Eduardo\\Documents\\GitHub\\Gym_Proyecto\\GymWeb\\GymWeb\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\Eduardo\\Documents\\GitHub\\Gym_Proyecto\\GymWeb\\GymWeb\\wwwroot\\img\\Black.png",
+      "PackagePath": "staticwebassets\\img\\Black.png"
+    },
+    {
+      "Id": "C:\\Users\\Eduardo\\Documents\\GitHub\\Gym_Proyecto\\GymWeb\\GymWeb\\wwwroot\\img\\Gold.png",
+      "PackagePath": "staticwebassets\\img\\Gold.png"
+    },
+    {
+      "Id": "C:\\Users\\Eduardo\\Documents\\GitHub\\Gym_Proyecto\\GymWeb\\GymWeb\\wwwroot\\img\\Platinum.png",
+      "PackagePath": "staticwebassets\\img\\Platinum.png"
+    },
+    {
+      "Id": "C:\\Users\\Eduardo\\Documents\\GitHub\\Gym_Proyecto\\GymWeb\\GymWeb\\wwwroot\\js\\Perfil\\action.js",
+      "PackagePath": "staticwebassets\\js\\Perfil\\action.js"
     },
     {
       "Id": "C:\\Users\\Eduardo\\Documents\\GitHub\\Gym_Proyecto\\GymWeb\\GymWeb\\wwwroot\\js\\site.js",

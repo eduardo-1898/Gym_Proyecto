@@ -85,5 +85,52 @@ namespace GymAPI.Controllers
             }
 
         }
+
+        [HttpPatch]
+        [Route("AgregarFotoPerfil")]
+        public IActionResult AgregarFotoPerfil([FromForm] string foto, int id)
+        {
+            try
+            {
+                var img = Convert.FromBase64String(foto);
+                using (var context = new SqlConnection(_connection))
+                {
+                    var datos = context.Execute("AgregarFotoPerfil", new
+                    {
+                        foto = img,
+                        id = id,
+                    }, commandType: CommandType.StoredProcedure);
+                    return Ok(datos);
+                }
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+
+        }
+
+        [HttpPut]
+        [Route("ModificarPerfil")]
+        public IActionResult ModificarPerfil(UsuarioEnt entidad) {
+            try
+            {
+                using (var context = new SqlConnection(_connection))
+                {
+                    var datos = context.QuerySingleOrDefault("ActualizarPerfil", new
+                    {
+                        nombre = entidad.NombreCompleto,
+                        telefono = entidad.Telefono,
+                        email = entidad.Correo,
+                        id = entidad.IdUsuario
+                    }, commandType: CommandType.StoredProcedure);
+                    return Ok(datos);
+                }
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
     }
 }

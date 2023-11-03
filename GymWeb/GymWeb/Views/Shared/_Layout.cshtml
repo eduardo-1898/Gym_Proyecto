@@ -1,8 +1,12 @@
-﻿@using Microsoft.AspNetCore.Http
+﻿@using GymWeb.Entities;
+@using Microsoft.AspNetCore.Http
+@using Newtonsoft.Json
 @inject IHttpContextAccessor HttpContextAccessor
 @{
     var rol = HttpContextAccessor.HttpContext.Session.GetString("RolUsuario");
     rol = (rol == null) ? "" : rol;
+    var model = JsonConvert.DeserializeObject<UsuarioEnt>(HttpContextAccessor.HttpContext.Session.GetString("userInfo"));
+    var nombre = model.NombreCompleto;
 }
 
 <!DOCTYPE html>
@@ -226,7 +230,19 @@
                             <li class="nav-item navbar-dropdown dropdown-user dropdown">
                                 <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
                                     <div class="avatar avatar-online">
-                                        <img src="../assets/img/avatars/1.png" class="w-px-40 h-auto rounded-circle" />
+                                        @{
+                                            if (model.FotoPerfil != null)
+                                            {
+                                                string base64String = Convert.ToBase64String(model.FotoPerfil);
+                                                string imgSrc = string.Format("data:image/png;base64,{0}", base64String);
+                                                string imgTag = string.Format("<img src='{0}' alt='user-avatar' class='d-block rounded' height='100' width='100' id='uploadedAvatar' />", imgSrc);
+                                                <img src="@imgSrc" class="w-px-40 h-auto rounded-circle" />
+                                            }
+                                            else
+                                            {
+                                                <img src="~/assets/img/avatars/sin-foto.png" class="w-px-40 h-auto rounded-circle" />
+                                            }
+                                        }
                                     </div>
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-end">
@@ -235,11 +251,23 @@
                                             <div class="d-flex">
                                                 <div class="flex-shrink-0 me-3">
                                                     <div class="avatar avatar-online">
-                                                        <img src="../assets/img/avatars/1.png" class="w-px-40 h-auto rounded-circle" />
+                                                        @{
+                                                            if (model.FotoPerfil != null)
+                                                            {
+                                                                string base64String = Convert.ToBase64String(model.FotoPerfil);
+                                                                string imgSrc = string.Format("data:image/png;base64,{0}", base64String);
+                                                                string imgTag = string.Format("<img src='{0}' alt='user-avatar' class='d-block rounded' height='100' width='100' id='uploadedAvatar' />", imgSrc);
+                                                                <img src="@imgSrc" class="w-px-40 h-auto rounded-circle" />
+                                                            }
+                                                            else
+                                                            {
+                                                                <img src="~/assets/img/avatars/sin-foto.png" class="w-px-40 h-auto rounded-circle" />
+                                                            }
+                                                        }
                                                     </div>
                                                 </div>
                                                 <div class="flex-grow-1">
-                                                    <span class="fw-semibold d-block">John Doe</span>
+                                                    <span class="fw-semibold d-block">@nombre</span>
                                                     <small class="text-muted">@rol</small>
                                                 </div>
                                             </div>
@@ -307,7 +335,16 @@
     <script src="~/assets/js/main.js"></script>
     <script src="~/assets/js/dashboards-analytics.js"></script>
     <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <script type="text/javascript">
+        var baseUrl = "@Url.Content("~/")";
 
+        function resolveUrl(url) {
+            if (url.indexOf("~/") === 0) {
+                url = baseUrl + url.substring(2);
+            }
+            return url;
+        }
+    </script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

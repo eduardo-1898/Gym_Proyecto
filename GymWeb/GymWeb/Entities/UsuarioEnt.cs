@@ -1,4 +1,6 @@
-﻿namespace GymWeb.Entities
+﻿using System.Drawing;
+
+namespace GymWeb.Entities
 {
     public class UsuarioEnt
     {
@@ -10,10 +12,11 @@
         public string? Correo { get; set; }
         public string? contrasenna { get; set; }
         public int Telefono { get; set; }
-        public bool ClaveTemporal { get; set; }
-        public DateTime FechaCreacionUsuario { get; set; }
-        public DateTime FechaCaducidad { get; set; }
-        public bool estado { get; set; }
+        public bool? ClaveTemporal { get; set; }
+        public DateTime? FechaCreacionUsuario { get; set; }
+        public DateTime? FechaCaducidad { get; set; }
+        public bool? Estado { get; set; }
+        public byte[] FotoPerfil { get; set; }
 
     }
 

@@ -10,12 +10,13 @@
         public string? Correo { get; set; } 
         public string? Contrasenna { get; set; }
         public int Telefono { get; set; }
-        public bool ClaveTemporal { get; set; }
-        public DateTime FechaCreacionUsuario { get; set; }
-        public DateTime FechaCaducidad { get; set; }
-        public bool Estado { get; set; }
+        public bool? ClaveTemporal { get; set; }
+        public DateTime? FechaCreacionUsuario { get; set; }
+        public DateTime? FechaCaducidad { get; set; }
+        public bool? Estado { get; set; }
+        public byte[]? FotoPerfil { get; set; }
     }
-    
+
     public class UsuarioEntRespuesta
     {
         public int Codigo { get; set; }

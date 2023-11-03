@@ -52,8 +52,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Eduardo/Documents/GitHub/Gym_Proyecto/GymWeb/GymWeb/Views/Subscripciones/cancel.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3Vic2NyaXBjaW9uZXNcY2FuY2VsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Eduardo/Documents/GitHub/Gym_Proyecto/GymWeb/GymWeb/Views/Subscripciones/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3Vic2NyaXBjaW9uZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Eduardo/Documents/GitHub/Gym_Proyecto/GymWeb/GymWeb/Views/Subscripciones/success.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3Vic2NyaXBjaW9uZXNcc3VjY2Vzcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Eduardo/Documents/GitHub/Gym_Proyecto/GymWeb/GymWeb/Views/_ViewImports.cshtml]

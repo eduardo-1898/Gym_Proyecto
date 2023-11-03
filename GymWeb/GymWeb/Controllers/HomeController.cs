@@ -1,9 +1,13 @@
-﻿using GymWeb.Models;
+﻿using GymWeb.Config;
+using GymWeb.Entities;
+using GymWeb.Models;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using System.Diagnostics;
 
 namespace GymWeb.Controllers
 {
+    [FilterConfig]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
