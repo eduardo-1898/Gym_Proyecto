@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using GymWeb.Models;
 using GymWeb.Entities;
+using Newtonsoft.Json;
 
 namespace GymWeb.Controllers
 {
@@ -8,16 +9,30 @@ namespace GymWeb.Controllers
     {
 
         private readonly ILogger<LoginController> _logger;
-
         private readonly IUsuarioModel _usuarioModel;
+        private readonly ISubscripcionModel _subscripcionModel;
 
-
-        public LoginController(ILogger<LoginController> logger, IUsuarioModel usuarioModel)
+        public LoginController(ILogger<LoginController> logger, IUsuarioModel usuarioModel, ISubscripcionModel subscripcionModel)
         {
             _logger = logger;
             _usuarioModel = usuarioModel;
+            _subscripcionModel = subscripcionModel;
         }
+
         public IActionResult Login()
+        {
+            HttpContext.Session.Clear();
+            return View();
+        }
+
+        [HttpGet]
+        public IActionResult RecuperarContrasenna()
+        {
+            return View();
+        }
+
+        [HttpGet]
+        public IActionResult RegistrarUsuario()
         {
             return View();
         }
@@ -32,64 +47,41 @@ namespace GymWeb.Controllers
                 if (datos?.Codigo != 1)
                 {
                     ViewBag.Mensaje = datos?.Mensaje;
-
-                    ViewBag.Mensaje = "Consulte con el administrador";
-                    //REGISTRO DE BITACORA
-                    //RegistrarEnBitacora("Usuario o Contraseña Incorrecta", entidad.USU_CONTRASENA.ToString(), "InicioSesion", 2);
-                    //REGISTRO DE BITACORA
-
-                    return View("Index");
+                    return View("Login");
                 }
 
-                HttpContext.Session.SetString("RolUsuario", datos.Objeto.IdRol.ToString());
+                var subs = _subscripcionModel.getSubscription(datos.Objeto.IdUsuario);
 
-                //REGISTRO DE BITACORA
-                //RegistrarEnBitacora("Inicio de Sesión", entidad.IdUsuario.ToString(), "HomeController", 1);
-                //REGISTRO DE BITACORA
+                HttpContext.Session.SetString("RolUsuario", datos.Objeto.NombreRol??"");
+                HttpContext.Session.SetString("userInfo",JsonConvert.SerializeObject(datos.Objeto));
+                HttpContext.Session.SetString("subscripcion",JsonConvert.SerializeObject(subs));
 
                 return RedirectToAction("Index", "Home");
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 ViewBag.Mensaje = "Consulte con el administrador";
-                return View("Index");
+                return View("Login");
             }
-        }
-
-        public IActionResult Index()
-        {
-            return View();
-        }
-
-        [HttpGet]
-        public IActionResult RecuperarContrasenna()
-        {
-                     return View();
-        }
-
-        [HttpGet]
-        public IActionResult RegistrarUsuario()
-        {
-            return View();
         }
 
         [HttpPost]
         public IActionResult RegistrarUsuario(UsuarioEnt entidad)
         {
-            var resp = _usuarioModel.RegistrarUsuario(entidad);
-            if (resp == 1)
+            try
             {
-                return RedirectToAction("Login", "Login");
-            }
-            else
-            {
+                var resp = _usuarioModel.RegistrarUsuario(entidad);
+                if (resp == 1)
+                    return RedirectToAction("Login", "Login");
+                //Respuesta si no se logro registrar el usuario
                 ViewBag.MensajePantalla = "No se logro registrar el usuario";
                 return View();
-
             }
-
-
-
+            catch (Exception)
+            {
+                ViewBag.MensajePantalla = "Ha ocurrido un error al procesar la solicitud de registro de usuario";
+                return View();
+            }
         }
 
     }

@@ -28,17 +28,11 @@ namespace GymAPI.Controllers
         {
             var resultado = new UsuarioEnt();
             var respuesta = new UsuarioEntRespuesta();
-
-
-
             try
             {
-
                 using (var connection = new SqlConnection(_configuration.GetConnectionString("DefaultConnection")))
                 {
-
                     resultado = connection.Query<UsuarioEnt>("ConsultarUsuario",
-
                         new { entidad.Correo, entidad.Contrasenna },
                         commandType: System.Data.CommandType.StoredProcedure).FirstOrDefault();
 
@@ -55,23 +49,14 @@ namespace GymAPI.Controllers
                     return Ok(respuesta);
                 }
 
-
             }
             catch (Exception)
             {
-
                 respuesta.Codigo = 3;
                 respuesta.Mensaje = "Se presentó un inconveniente";
                 return Ok(respuesta);
-
-
             }
         }
-
-
-
-
-
 
 
         [HttpPost]
@@ -81,13 +66,10 @@ namespace GymAPI.Controllers
         {
             try
             {
-
                 using (var context = new SqlConnection(_connection))
                 {
-
                     var datos = context.Execute("RegistrarUsuario", new
                     {
-
                         entidad.Identificacion,
                         entidad.NombreCompleto,
                         entidad.Telefono,
@@ -95,21 +77,60 @@ namespace GymAPI.Controllers
                         entidad.Contrasenna
                     }, commandType: CommandType.StoredProcedure);
                     return Ok(datos);
-
-
                 }
-
-
             }
             catch (Exception ex)
             {
                 return BadRequest(ex.Message);
             }
 
-            //}
+        }
 
+        [HttpPatch]
+        [Route("AgregarFotoPerfil")]
+        public IActionResult AgregarFotoPerfil([FromForm] string foto, int id)
+        {
+            try
+            {
+                var img = Convert.FromBase64String(foto);
+                using (var context = new SqlConnection(_connection))
+                {
+                    var datos = context.Execute("AgregarFotoPerfil", new
+                    {
+                        foto = img,
+                        id = id,
+                    }, commandType: CommandType.StoredProcedure);
+                    return Ok(datos);
+                }
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
 
+        }
 
+        [HttpPut]
+        [Route("ModificarPerfil")]
+        public IActionResult ModificarPerfil(UsuarioEnt entidad) {
+            try
+            {
+                using (var context = new SqlConnection(_connection))
+                {
+                    var datos = context.QuerySingleOrDefault("ActualizarPerfil", new
+                    {
+                        nombre = entidad.NombreCompleto,
+                        telefono = entidad.Telefono,
+                        email = entidad.Correo,
+                        id = entidad.IdUsuario
+                    }, commandType: CommandType.StoredProcedure);
+                    return Ok(datos);
+                }
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
     }
 }

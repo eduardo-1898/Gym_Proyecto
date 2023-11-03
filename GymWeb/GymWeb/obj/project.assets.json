@@ -1780,6 +1780,23 @@
           }
         }
       },
+      "Stripe.net/43.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.3",
+          "System.Configuration.ConfigurationManager": "6.0.0"
+        },
+        "compile": {
+          "lib/net6.0/Stripe.net.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Stripe.net.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "System.AppContext/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -5794,6 +5811,29 @@
         "runtimes/ubuntu.16.10-x64/native/System.Security.Cryptography.Native.OpenSsl.so"
       ]
     },
+    "Stripe.net/43.0.0": {
+      "sha512": "Kdv2B5dWagOZlDrGQjN3yDJW2anZl0QWgenpmUPoOeOXOVRvw+jpwefvHqWw6AoGQ+WcaNdFYF+5nxcZ1mR7EA==",
+      "type": "package",
+      "path": "stripe.net/43.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "icon.png",
+        "lib/net461/Stripe.net.dll",
+        "lib/net461/Stripe.net.xml",
+        "lib/net5.0/Stripe.net.dll",
+        "lib/net5.0/Stripe.net.xml",
+        "lib/net6.0/Stripe.net.dll",
+        "lib/net6.0/Stripe.net.xml",
+        "lib/netcoreapp3.1/Stripe.net.dll",
+        "lib/netcoreapp3.1/Stripe.net.xml",
+        "lib/netstandard2.0/Stripe.net.dll",
+        "lib/netstandard2.0/Stripe.net.xml",
+        "stripe.net.43.0.0.nupkg.sha512",
+        "stripe.net.nuspec"
+      ]
+    },
     "System.AppContext/4.3.0": {
       "sha512": "fKC+rmaLfeIzUhagxY17Q9siv/sPrjjKcfNg1Ic8IlQkZLipo8ljcaZQu4VtI4Jqbzjc2VTjzGLF6WmsRXAEgA==",
       "type": "package",
@@ -9540,27 +9580,28 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 6.0.16"
+      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 6.0.16",
+      "Stripe.net >= 43.0.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\varga\\.nuget\\packages\\": {},
+    "C:\\Users\\Eduardo\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\varga\\Documents\\GitHub\\Gym_Proyecto\\GymWeb\\GymWeb\\GymWeb.csproj",
+      "projectUniqueName": "C:\\Users\\Eduardo\\Documents\\GitHub\\Gym_Proyecto\\GymWeb\\GymWeb\\GymWeb.csproj",
       "projectName": "GymWeb",
-      "projectPath": "C:\\Users\\varga\\Documents\\GitHub\\Gym_Proyecto\\GymWeb\\GymWeb\\GymWeb.csproj",
-      "packagesPath": "C:\\Users\\varga\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\varga\\Documents\\GitHub\\Gym_Proyecto\\GymWeb\\GymWeb\\obj\\",
+      "projectPath": "C:\\Users\\Eduardo\\Documents\\GitHub\\Gym_Proyecto\\GymWeb\\GymWeb\\GymWeb.csproj",
+      "packagesPath": "C:\\Users\\Eduardo\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Eduardo\\Documents\\GitHub\\Gym_Proyecto\\GymWeb\\GymWeb\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\varga\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Eduardo\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -9569,7 +9610,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
+        "C:\\Program Files\\dotnet\\sdk\\7.0.306\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -9591,6 +9632,10 @@
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",
             "version": "[6.0.16, )"
+          },
+          "Stripe.net": {
+            "target": "Package",
+            "version": "[43.0.0, )"
           }
         },
         "imports": [
@@ -9612,7 +9657,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
       }
     }
   }
