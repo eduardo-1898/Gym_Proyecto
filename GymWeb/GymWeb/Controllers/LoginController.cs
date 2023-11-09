@@ -30,13 +30,7 @@ namespace GymWeb.Controllers
         {
             return View();
         }
-
-        [HttpGet]
-        public IActionResult RegistrarUsuario()
-        {
-            return View();
-        }
-
+        
         [HttpPost]
         public IActionResult InicioSesion(UsuarioEnt entidad)
         {
@@ -65,6 +59,12 @@ namespace GymWeb.Controllers
             }
         }
 
+        public IActionResult Index()
+        {
+            return View();
+        }
+
+
         [HttpPost]
         public IActionResult RegistrarUsuario(UsuarioEnt entidad)
         {
@@ -81,6 +81,58 @@ namespace GymWeb.Controllers
             {
                 ViewBag.MensajePantalla = "Ha ocurrido un error al procesar la solicitud de registro de usuario";
                 return View();
+            }
+        }
+
+        //Inicio metodo de recuperacion
+        [HttpGet]
+        public IActionResult RecuperarContrasenna()
+        {
+                     return View();
+        }
+           
+
+        [HttpPost]
+        public IActionResult RecuperarContrasenna(UsuarioEnt entidad)
+        {
+            var resp = _usuarioModel.RecuperarContrasenna(entidad);
+            if (resp == 1)
+            {
+                return RedirectToAction("Login", "Login");
+            }
+            else
+            {
+                ViewBag.MensajePantalla = "No se logro recuperar el usuario";
+                return View();
+
+            }
+        }
+
+        //Fin metodo de recuperacion
+
+        //Inicio metodo de cambiar clave
+
+        [HttpGet]
+        public IActionResult CambiarClaveCuenta(string q)
+        {
+            UsuarioEnt entidad = new UsuarioEnt();
+            entidad.IdUsuario = long.Parse(q);
+            return View(entidad);
+        }
+
+        [HttpPost]
+        public IActionResult CambiarClaveCuenta(UsuarioEnt entidad)
+        {
+            var resp = _usuarioModel.CambiarClaveCuenta(entidad);
+            if (resp == 1)
+            {
+                return RedirectToAction("Login", "Login");
+            }
+            else
+            {
+                ViewBag.MensajePantalla = "No se logro cambiar su contraseña";
+                return View();
+
             }
         }
 

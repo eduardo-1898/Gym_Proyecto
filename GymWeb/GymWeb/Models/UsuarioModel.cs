@@ -38,10 +38,22 @@ namespace GymWeb.Models
             }
         }
 
-        public int RecuperarCuenta(UsuarioEnt entidad)
+
+        //Inicio metodo de recuperacion
+
+        public int RecuperarContrasenna(UsuarioEnt entidad)
         {
-            throw new NotImplementedException();
+            string url = _urlApi + "api/Usuario/RecuperarCuenta";
+            JsonContent obj = JsonContent.Create(entidad);
+            var resp = _httpClient.PostAsync(url, obj).Result;
+
+            if (resp.IsSuccessStatusCode)
+                return resp.Content.ReadFromJsonAsync<int>().Result;
+            else
+                return 0;
         }
+
+        //Fin metodo de recuperacion
 
         public int RegistrarUsuario(UsuarioEnt entidad)
         {
@@ -62,6 +74,19 @@ namespace GymWeb.Models
             }
         }
 
+        public int CambiarClaveCuenta(UsuarioEnt entidad)
+        {
+            string url = _urlApi + "api/Usuario/CambiarClaveCuenta";
+            JsonContent obj = JsonContent.Create(entidad);
+            var resp = _httpClient.PutAsync(url, obj).Result;
+
+            if (resp.IsSuccessStatusCode)
+                return resp.Content.ReadFromJsonAsync<int>().Result;
+            else
+                return 0;
+
+        }
+        
         public int AgregarFotoPerfil(byte[] img, int id)
         {
             try
@@ -69,6 +94,7 @@ namespace GymWeb.Models
 
                 var collection = new List<KeyValuePair<string, string>>();
                 collection.Add(new("foto", Convert.ToBase64String(img)));
+
 
                 string url = _urlApi + "api/Usuario/AgregarFotoPerfil?id="+id;
                 var content = new FormUrlEncodedContent(collection);

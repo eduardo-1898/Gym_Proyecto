@@ -18,6 +18,8 @@ namespace GymWeb.Entities
         public bool? Estado { get; set; }
         public byte[] FotoPerfil { get; set; }
 
+        public string contrasennaTemporal { get; set; } = string.Empty;
+
     }
 
     public class UsuarioEntRespuesta
