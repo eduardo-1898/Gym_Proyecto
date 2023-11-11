@@ -37,7 +37,7 @@ namespace GymAPI.Controllers
                 using (var connection = new SqlConnection(_configuration.GetConnectionString("DefaultConnection")))
                 {
                     resultado = connection.Query<UsuarioEnt>("ConsultarUsuario",
-                        new { entidad.Correo, entidad.Contrasenna },
+                        new { entidad.Correo, entidad.contrasenna },
                         commandType: System.Data.CommandType.StoredProcedure).FirstOrDefault();
 
                     if (resultado == null)
@@ -78,7 +78,7 @@ namespace GymAPI.Controllers
                         entidad.NombreCompleto,
                         entidad.Telefono,
                         entidad.Correo,
-                        entidad.Contrasenna
+                        entidad.contrasenna
                     }, commandType: CommandType.StoredProcedure);
                     return Ok(datos);
                 }
@@ -93,7 +93,7 @@ namespace GymAPI.Controllers
 
         [HttpPatch]
         [Route("AgregarFotoPerfil")]
-        public IActionResult AgregarFotoPerfil([FromForm] string foto, int id)
+        public IActionResult AgregarFotoPerfil([FromForm] string foto, long id)
         {
             try
             {
@@ -191,7 +191,7 @@ namespace GymAPI.Controllers
                     var datos = context.Execute("CambiarClaveCuenta", new
                     {
                         entidad.IdUsuario,
-                        entidad.Contrasenna,
+                        entidad.contrasenna,
                         entidad.contrasennaTemporal
                     }, commandType: CommandType.StoredProcedure);
                     return Ok(datos);

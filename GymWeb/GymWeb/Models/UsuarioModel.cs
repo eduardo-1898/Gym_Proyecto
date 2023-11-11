@@ -87,7 +87,7 @@ namespace GymWeb.Models
 
         }
         
-        public int AgregarFotoPerfil(byte[] img, int id)
+        public int AgregarFotoPerfil(byte[] img, long id)
         {
             try
             {

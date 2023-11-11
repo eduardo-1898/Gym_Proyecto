@@ -16,6 +16,6 @@ namespace GymWeb.Models
         /// </summary>
         /// <param name="idUsuario"></param>
         /// <returns></returns>
-        public SubscripcionEnt getSubscription(int idUsuario);
+        public SubscripcionEnt getSubscription(long idUsuario);
     }
 }

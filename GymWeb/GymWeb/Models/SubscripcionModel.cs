@@ -35,7 +35,7 @@ namespace GymWeb.Models
             }
         }
 
-        public SubscripcionEnt getSubscription(int idUsuario) {
+        public SubscripcionEnt getSubscription(long idUsuario) {
             try
             {
                 string url = $"api/Subscripciones/ObtenerSubscripcion?idUsuario={idUsuario}";

@@ -25,12 +25,8 @@ namespace GymWeb.Controllers
             return View();
         }
 
-        [HttpGet]
-        public IActionResult RecuperarContrasenna()
-        {
-            return View();
-        }
-        
+
+
         [HttpPost]
         public IActionResult InicioSesion(UsuarioEnt entidad)
         {
@@ -46,9 +42,9 @@ namespace GymWeb.Controllers
 
                 var subs = _subscripcionModel.getSubscription(datos.Objeto.IdUsuario);
 
-                HttpContext.Session.SetString("RolUsuario", datos.Objeto.NombreRol??"");
-                HttpContext.Session.SetString("userInfo",JsonConvert.SerializeObject(datos.Objeto));
-                HttpContext.Session.SetString("subscripcion",JsonConvert.SerializeObject(subs));
+                HttpContext.Session.SetString("RolUsuario", datos.Objeto.NombreRol ?? "");
+                HttpContext.Session.SetString("userInfo", JsonConvert.SerializeObject(datos.Objeto));
+                HttpContext.Session.SetString("subscripcion", JsonConvert.SerializeObject(subs));
 
                 return RedirectToAction("Index", "Home");
             }
@@ -64,6 +60,12 @@ namespace GymWeb.Controllers
             return View();
         }
 
+
+
+        [HttpGet]
+        public IActionResult RegistrarUsuario() {
+            return View();
+        }
 
         [HttpPost]
         public IActionResult RegistrarUsuario(UsuarioEnt entidad)

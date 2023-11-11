@@ -4,7 +4,7 @@ namespace GymWeb.Entities
 {
     public class UsuarioEnt
     {
-        public int IdUsuario { get; set; }
+        public long IdUsuario { get; set; }
         public string? Identificacion { get; set; }
         public string? NombreCompleto { get; set; }
         public int IdRol { get; set; }
@@ -18,7 +18,7 @@ namespace GymWeb.Entities
         public bool? Estado { get; set; }
         public byte[] FotoPerfil { get; set; }
 
-        public string contrasennaTemporal { get; set; } = string.Empty;
+        public string? contrasennaTemporal { get; set; } 
 
     }
 

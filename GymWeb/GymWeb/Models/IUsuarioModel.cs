@@ -11,8 +11,8 @@ namespace GymWeb.Models
 
         public int CambiarClaveCuenta(UsuarioEnt entidad);
 
-        public int RecuperarCuenta(UsuarioEnt entidad);
-        public int AgregarFotoPerfil(byte[] img, int id);
+       
+        public int AgregarFotoPerfil(byte[] img, long id);
         public UsuarioEnt ModificarInfoPerfil(UsuarioEnt entidad);
 
     }
