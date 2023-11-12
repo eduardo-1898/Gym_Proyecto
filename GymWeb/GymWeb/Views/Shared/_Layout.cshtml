@@ -32,6 +32,8 @@
     <script src="~/assets/js/config.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.32/dist/sweetalert2.all.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.32/dist/sweetalert2.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+
 </head>
 <body>
     <div class="layout-wrapper layout-content-navbar">
@@ -109,6 +111,28 @@
                                     <div data-i18n="Without menu">Planes disponibles</div>
                                 </a>
                             </li>
+                        </ul>
+                    </li>
+
+                    <li class="menu-header small text-uppercase">
+                        <span class="menu-header-text">Entrenadores</span>
+                    </li>
+                    <li class="menu-item">
+                        <a href="javascript:void(0);" class="menu-link menu-toggle">
+                            <i class="menu-icon tf-icons bx bx-dock-top"></i>
+                            <div data-i18n="Account Settings">Citas</div>
+                        </a>
+                        <ul class="menu-sub">
+                            <li class="menu-item">
+                                <a href="@Url.Action("CrearCita","Entrenador")" class="menu-link">
+                                    <div data-i18n="Account">Crear Citas</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="@Url.Action("EditarCitas","Entrenador")" class="menu-link">
+                                    <div data-i18n="Account">Editar Citas</div>
+                                </a>
+                            </li>                          
                         </ul>
                     </li>
 

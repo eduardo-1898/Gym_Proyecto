@@ -1,0 +1,42 @@
+﻿@model IEnumerable<GymWeb.Entities.EntrenadorEnt>
+
+
+@{
+    ViewData["Title"] = "EditarCitas";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Información de las citas registradas</h4>
+
+            <table class="table table-bordered">
+                <thead>
+                    <tr>                   
+                        <th style="text-align:center">Fecha de la Cita</th>
+                        <th style="text-align:center">Espacios Disponibles</th>
+                  @*      <th style="text-align:center">Editar Citas</th>*@
+                        <th style="text-align:center">Eliminar Citas</th>
+
+
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>                           
+                            <td style="text-align:center">@item.FechaCita</td>
+                            <td style="text-align:center">@item.EspaciosDisponibles</td>
+                        @*    <td style="text-align:center"><a href="@Url.Action("ActualizarUsuario","Usuario", new { q = item.IdCita })"><i class="fa fa-user fa-lg"></i></a></td>*@
+                           <td style="text-align:center"><a href="@Url.Action("EliminarCita","Entrenador", new { q = item.IdCita })"><i class="fa fa-trash fa-lg"></i></a></td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>
+

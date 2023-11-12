@@ -12,6 +12,8 @@ builder.Services.AddSession();
 builder.Services.AddHttpClient();
 builder.Services.AddSingleton<IUsuarioModel, UsuarioModel>();
 builder.Services.AddSingleton<ISubscripcionModel, SubscripcionModel>();
+builder.Services.AddSingleton<IEntrenadorModel, EntrenadorModel>();
+
 builder.Services.AddHttpContextAccessor();
 
 

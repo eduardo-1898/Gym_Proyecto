@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "VFriGomK6n/jS56o7KD41T/EXSZKAHo8LNpJkmq6UV+GAKcHwCUY0R4rBVMps6YWz76Pr0OPYefM0L8SBOMM1Q==",
+  "dgSpecHash": "DajH0tpHifsWuRpoGsAbk4nzM9IxlfTnB1t5EtAPgNWwofP5B06kQnOV4tf1EuTQMAcIZ5aDG5iNCTOG6HrIlA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\varga\\Documents\\GitHub\\Gym_Proyecto\\GymWeb\\GymWeb\\GymWeb.csproj",
+  "projectFilePath": "C:\\Users\\varga\\OneDrive\\Documentos\\Fidelitas\\Programacion Web Avanzada\\Gym_Proyecto\\GymWeb\\GymWeb\\GymWeb.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\varga\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\varga\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

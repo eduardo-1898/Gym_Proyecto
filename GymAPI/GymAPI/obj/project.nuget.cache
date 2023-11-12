@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "CLgequKcQ9HNSYSZXgQru20XjeJMfRSqQ2KTQJ1SwQOYubj/LN9OBcF/6e5gGCe8gQaEWUK2m16ZQ4IlEtoaLA==",
+  "dgSpecHash": "E7Nl22YTdjH9m87m7rYRZCuHtfDX7jTIdMunoFGAXwqNkQGHLt1zsOPlOni+5qRKJSjL8qpSeQYyF3v+l3U3dw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\varga\\Documents\\GitHub\\Gym_Proyecto\\GymAPI\\GymAPI\\GymAPI.csproj",
+  "projectFilePath": "C:\\Users\\varga\\OneDrive\\Documentos\\Fidelitas\\Programacion Web Avanzada\\Gym_Proyecto\\GymAPI\\GymAPI\\GymAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\varga\\.nuget\\packages\\dapper\\2.1.4\\dapper.2.1.4.nupkg.sha512",
     "C:\\Users\\varga\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
