@@ -26,4 +26,10 @@
         public bool Resultado { get; set; }
     }
 
+
+
+
+
+
+
 }
