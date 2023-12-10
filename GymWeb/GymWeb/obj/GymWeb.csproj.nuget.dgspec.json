@@ -1,33 +1,33 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\Gym_Proyecto\\GymWeb\\GymWeb\\GymWeb.csproj": {}
+    "C:\\Users\\varga\\OneDrive\\Documentos\\Fidelitas\\Programacion Web Avanzada\\Gym_Proyecto\\GymWeb\\GymWeb\\GymWeb.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\Gym_Proyecto\\GymWeb\\GymWeb\\GymWeb.csproj": {
+    "C:\\Users\\varga\\OneDrive\\Documentos\\Fidelitas\\Programacion Web Avanzada\\Gym_Proyecto\\GymWeb\\GymWeb\\GymWeb.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\Gym_Proyecto\\GymWeb\\GymWeb\\GymWeb.csproj",
+        "projectUniqueName": "C:\\Users\\varga\\OneDrive\\Documentos\\Fidelitas\\Programacion Web Avanzada\\Gym_Proyecto\\GymWeb\\GymWeb\\GymWeb.csproj",
         "projectName": "GymWeb",
-        "projectPath": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\Gym_Proyecto\\GymWeb\\GymWeb\\GymWeb.csproj",
-        "packagesPath": "C:\\Users\\jesus\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jesus\\OneDrive\\Documentos\\GitHub\\Gym_Proyecto\\GymWeb\\GymWeb\\obj\\",
+        "projectPath": "C:\\Users\\varga\\OneDrive\\Documentos\\Fidelitas\\Programacion Web Avanzada\\Gym_Proyecto\\GymWeb\\GymWeb\\GymWeb.csproj",
+        "packagesPath": "C:\\Users\\varga\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\varga\\OneDrive\\Documentos\\Fidelitas\\Programacion Web Avanzada\\Gym_Proyecto\\GymWeb\\GymWeb\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Progress\\ToolboxNuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\jesus\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Telerik UI for WPF.config"
+          "C:\\Users\\varga\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://nuget.telerik.com/nuget": {}
+          "C:\\Program Files\\dotnet\\sdk\\7.0.304\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
@@ -60,7 +60,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -72,7 +73,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.319\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
         }
       }
     }

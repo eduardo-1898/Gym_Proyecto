@@ -67,6 +67,7 @@ namespace GymWeb.Controllers
             return View();
         }
 
+
         [HttpPost]
         public IActionResult RegistrarUsuario(UsuarioEnt entidad)
         {
@@ -74,17 +75,21 @@ namespace GymWeb.Controllers
             {
                 var resp = _usuarioModel.RegistrarUsuario(entidad);
                 if (resp == 1)
-                    return RedirectToAction("Login", "Login");
-                //Respuesta si no se logro registrar el usuario
-                ViewBag.MensajePantalla = "No se logro registrar el usuario";
-                return View();
+                {
+                    return Json(new { success = true, redirectUrl = Url.Action("Login", "Login") });
+                }
+                else
+                {
+                    return Json(new { success = false, errorMessage = "No se logró registrar el usuario" });
+                }
             }
             catch (Exception)
             {
-                ViewBag.MensajePantalla = "Ha ocurrido un error al procesar la solicitud de registro de usuario";
-                return View();
+                return Json(new { success = false, errorMessage = "Ha ocurrido un error al procesar la solicitud de registro de usuario" });
             }
         }
+
+
 
         //Inicio metodo de recuperacion
         [HttpGet]
