@@ -100,6 +100,8 @@ namespace GymAPI.Controllers
 
         //Fin del metodo
 
+
+
     }
 }
 

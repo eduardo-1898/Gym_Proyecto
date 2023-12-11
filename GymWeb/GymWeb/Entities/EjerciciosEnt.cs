@@ -1,6 +1,6 @@
-﻿namespace GymAPI.Entities
+﻿namespace GymWeb.Entities
 {
-    public class EjercicioEnt
+    public class EjerciciosEnt
     {
 
 

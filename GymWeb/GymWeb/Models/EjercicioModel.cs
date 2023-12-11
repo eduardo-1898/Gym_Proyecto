@@ -1,18 +1,17 @@
 ﻿using GymWeb.Entities;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using System.Net.Http.Headers;
 
 namespace GymWeb.Models
 {
-    public class EntrenadorModel : IEntrenadorModel
+    public class EjercicioModel: IEjercicioModel
     {
+
 
         private readonly HttpClient _httpClient;
         private readonly IConfiguration _configuration;
         private string _urlApi;
         private readonly IHttpContextAccessor _HttpContextAccessor;
 
-        public EntrenadorModel(HttpClient httpClient, IConfiguration configuration, IHttpContextAccessor httpContextAccessor)
+        public EjercicioModel(HttpClient httpClient, IConfiguration configuration, IHttpContextAccessor httpContextAccessor)
         {
 
             _httpClient = httpClient;
@@ -21,11 +20,12 @@ namespace GymWeb.Models
             _HttpContextAccessor = httpContextAccessor;
         }
 
-        public int CrearCita(EntrenadorEnt entidad)
+
+        public int CrearEjercicio(EjerciciosEnt entidad)
         {
             try
             {
-                string url = _urlApi + "api/Entrenador/CrearCita";
+                string url = _urlApi + "api/Ejercicio/CrearEjercicio";
                 JsonContent obj = JsonContent.Create(entidad);
                 var resp = _httpClient.PostAsync(url, obj).Result;
 
@@ -35,31 +35,30 @@ namespace GymWeb.Models
             }
             catch (Exception)
             {
-               
                 return 0;
             }
         }
         //Fin del metodo
 
 
-
-        public List<EntrenadorEnt>? EditarCitas()
+        public List<EjerciciosEnt>? ConsultarEjercicio()
         {
-            string url = _urlApi + "api/Entrenador/EditarCitas";
+            string url = _urlApi + "api/Ejercicio/ConsultarEjercicio";
             var resp = _httpClient.GetAsync(url).Result;
 
             if (resp.IsSuccessStatusCode)
-                return resp.Content.ReadFromJsonAsync<List<EntrenadorEnt>>().Result;
+                return resp.Content.ReadFromJsonAsync<List<EjerciciosEnt>>().Result;
             else
                 return null;
         }
 
         //Fin del metodo
 
-        public int EliminarCita(long q)
+
+        public int EliminarEjercicio(long q)
         {
-            string url = _urlApi + "api/Entrenador/EliminarCita?q=" + q;
-  
+            string url = _urlApi + "api/Ejercicio/EliminarEjercicio?q=" + q;
+
             var resp = _httpClient.DeleteAsync(url).Result;
 
             if (resp.IsSuccessStatusCode)
@@ -68,10 +67,6 @@ namespace GymWeb.Models
                 return 0;
         }
         //Fin del metodo
-
-
-
-
 
     }
 }

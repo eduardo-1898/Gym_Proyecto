@@ -5,7 +5,12 @@
 
         public long IdCita { get; set; }
         public int EspaciosDisponibles { get; set; }    
-        public DateTime FechaCita { get; set; }    
+        public DateTime FechaCita { get; set; }
+
+
+
+
+
 
     }
 }

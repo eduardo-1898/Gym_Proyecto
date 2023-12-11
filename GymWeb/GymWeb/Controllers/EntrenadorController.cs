@@ -66,6 +66,8 @@ namespace GymWeb.Controllers
 
         //Fin del metodo
 
+  
+
 
     }
 }

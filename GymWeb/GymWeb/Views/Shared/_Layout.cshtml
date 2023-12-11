@@ -35,6 +35,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.10.1/sweetalert2.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
     @await RenderSectionAsync("Estilos", required: false)
 
 </head>
@@ -136,6 +137,25 @@
                                     <div data-i18n="Account">Editar Citas</div>
                                 </a>
                             </li>                          
+                        </ul>
+                    </li>
+
+                    <li class="menu-item">
+                        <a href="javascript:void(0);" class="menu-link menu-toggle">
+                            <i class="menu-icon tf-icons bx bx-dock-top"></i>
+                            <div data-i18n="Account Settings">Ejercicios</div>
+                        </a>
+                        <ul class="menu-sub">
+                            <li class="menu-item">
+                                <a href="@Url.Action("CrearEjercicio","Ejercicio")" class="menu-link">
+                                    <div data-i18n="Account">Crear Ejercicios</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="@Url.Action("ConsultarEjercicio","Ejercicio")" class="menu-link">
+                                    <div data-i18n="Account">Consultar Ejercicios </div>
+                                </a>
+                            </li>
                         </ul>
                     </li>
 

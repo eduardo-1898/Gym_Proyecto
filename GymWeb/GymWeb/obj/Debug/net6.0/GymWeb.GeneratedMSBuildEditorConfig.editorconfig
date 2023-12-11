@@ -16,6 +16,14 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\varga\OneDrive\Documentos\Fidelitas\Programacion Web Avanzada\Gym_Proyecto\GymWeb\GymWeb
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/varga/OneDrive/Documentos/Fidelitas/Programacion Web Avanzada/Gym_Proyecto/GymWeb/GymWeb/Views/Ejercicio/ConsultarEjercicio.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRWplcmNpY2lvXENvbnN1bHRhckVqZXJjaWNpby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/varga/OneDrive/Documentos/Fidelitas/Programacion Web Avanzada/Gym_Proyecto/GymWeb/GymWeb/Views/Ejercicio/CrearEjercicio.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRWplcmNpY2lvXENyZWFyRWplcmNpY2lvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/varga/OneDrive/Documentos/Fidelitas/Programacion Web Avanzada/Gym_Proyecto/GymWeb/GymWeb/Views/Entrenador/CrearCita.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW50cmVuYWRvclxDcmVhckNpdGEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

@@ -11,5 +11,7 @@ namespace GymWeb.Models
         public List<EntrenadorEnt>? EditarCitas();
 
         public int EliminarCita(long q);
+
+
     }
 }
