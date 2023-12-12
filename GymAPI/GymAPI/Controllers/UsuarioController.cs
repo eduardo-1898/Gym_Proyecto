@@ -85,7 +85,23 @@ namespace GymAPI.Controllers
             }
             catch (Exception ex)
             {
-                return BadRequest(ex.Message);
+                using (var context = new SqlConnection(_connection))
+                {
+                    try
+                    {
+                        var datos = context.Execute("InsertarBitacoraErrores", new
+                        {
+                            Descripcion = ex.Message,
+                            Tipo = "Api"
+                        }, commandType: CommandType.StoredProcedure);
+                        return BadRequest(ex.Message);
+                    }
+                    catch (Exception innerEx)
+                    {
+                        // En caso de que falle la inserción en la bitácora, puedes registrar el error en algún otro lugar o manejarlo adecuadamente.
+                        return BadRequest($"Error al Registrar Usuario en la bitácora: {innerEx.Message}");
+                    }
+                }
             }
 
 
@@ -110,7 +126,23 @@ namespace GymAPI.Controllers
             }
             catch (Exception ex)
             {
-                return BadRequest(ex.Message);
+                using (var context = new SqlConnection(_connection))
+                {
+                    try
+                    {
+                        var datos = context.Execute("InsertarBitacoraErrores", new
+                        {
+                            Descripcion = ex.Message,
+                            Tipo = "Api"
+                        }, commandType: CommandType.StoredProcedure);
+                        return BadRequest(ex.Message);
+                    }
+                    catch (Exception innerEx)
+                    {
+                        // En caso de que falle la inserción en la bitácora, puedes registrar el error en algún otro lugar o manejarlo adecuadamente.
+                        return BadRequest($"Error al Agregar FotoPerfil en la bitácora: {innerEx.Message}");
+                    }
+                }
             }
 
         }
@@ -134,7 +166,23 @@ namespace GymAPI.Controllers
             }
             catch (Exception ex)
             {
-                return BadRequest(ex.Message);
+                using (var context = new SqlConnection(_connection))
+                {
+                    try
+                    {
+                        var datos = context.Execute("InsertarBitacoraErrores", new
+                        {
+                            Descripcion = ex.Message,
+                            Tipo = "Api"
+                        }, commandType: CommandType.StoredProcedure);
+                        return BadRequest(ex.Message);
+                    }
+                    catch (Exception innerEx)
+                    {
+                        // En caso de que falle la inserción en la bitácora, puedes registrar el error en algún otro lugar o manejarlo adecuadamente.
+                        return BadRequest($"Error al Modificar Perfil en la bitácora: {innerEx.Message}");
+                    }
+                }
             }
         }
 
@@ -169,7 +217,23 @@ namespace GymAPI.Controllers
             }
             catch (Exception ex)
             {
-                return BadRequest(ex.Message);
+                using (var context = new SqlConnection(_connection))
+                {
+                    try
+                    {
+                        var datos = context.Execute("InsertarBitacoraErrores", new
+                        {
+                            Descripcion = ex.Message,
+                            Tipo = "Api"
+                        }, commandType: CommandType.StoredProcedure);
+                        return BadRequest(ex.Message);
+                    }
+                    catch (Exception innerEx)
+                    {
+                        // En caso de que falle la inserción en la bitácora, puedes registrar el error en algún otro lugar o manejarlo adecuadamente.
+                        return BadRequest($"Error al Recuperar Cuenta en la bitácora: {innerEx.Message}");
+                    }
+                }
             }
         }
 
@@ -202,7 +266,23 @@ namespace GymAPI.Controllers
             }
             catch (Exception ex)
             {
-                return BadRequest(ex.Message);
+                using (var context = new SqlConnection(_connection))
+                {
+                    try
+                    {
+                        var datos = context.Execute("InsertarBitacoraErrores", new
+                        {
+                            Descripcion = ex.Message,
+                            Tipo = "Api"
+                        }, commandType: CommandType.StoredProcedure);
+                        return BadRequest(ex.Message);
+                    }
+                    catch (Exception innerEx)
+                    {
+                        // En caso de que falle la inserción en la bitácora, puedes registrar el error en algún otro lugar o manejarlo adecuadamente.
+                        return BadRequest($"Error al Cambiar Clave Cuenta en la bitácora: {innerEx.Message}");
+                    }
+                }
             }
 
         }

@@ -22,11 +22,10 @@ namespace GymAPI.Controllers
             _connection = _configuration.GetConnectionString("DefaultConnection");
             _hostingEnvironment = hostingEnvironment;
         }
-
+           
 
         [HttpPost]
         [Route("CrearEjercicio")]
-
         public IActionResult CrearEjercicio(EjercicioEnt entidad)
         {
             try
@@ -37,19 +36,34 @@ namespace GymAPI.Controllers
                     {
                         entidad.NombreEjercicio,
                         entidad.DescripcionEjercicio,
-                        entidad.VideoEjercicio,
-
+                        entidad.VideoEjercicio
                     }, commandType: CommandType.StoredProcedure);
                     return Ok(datos);
                 }
             }
             catch (Exception ex)
             {
-                return BadRequest(ex.Message);
+                using (var context = new SqlConnection(_connection))
+                {
+                    try
+                    {
+                        var datos = context.Execute("InsertarBitacoraErrores", new
+                        {
+                            Descripcion = ex.Message,
+                            Tipo = "Api"
+                        }, commandType: CommandType.StoredProcedure);
+                        return BadRequest(ex.Message);
+                    }
+                    catch (Exception innerEx)
+                    {
+                        // En caso de que falle la inserción en la bitácora, puedes registrar el error en algún otro lugar o manejarlo adecuadamente.
+                        return BadRequest($"Error al registrar en la bitácora: {innerEx.Message}");
+                    }
+                }
             }
-
         }
-        //Fin del metodo
+
+
 
 
         [HttpGet]
@@ -69,7 +83,23 @@ namespace GymAPI.Controllers
             }
             catch (Exception ex)
             {
-                return BadRequest(ex.Message);
+                using (var context = new SqlConnection(_connection))
+                {
+                    try
+                    {
+                        var datos = context.Execute("InsertarBitacoraErrores", new
+                        {
+                            Descripcion = ex.Message,
+                            Tipo = "Api"
+                        }, commandType: CommandType.StoredProcedure);
+                        return BadRequest(ex.Message);
+                    }
+                    catch (Exception innerEx)
+                    {
+                        // En caso de que falle la inserción en la bitácora, puedes registrar el error en algún otro lugar o manejarlo adecuadamente.
+                        return BadRequest($"Error al Consultar Ejercicio en la bitácora: {innerEx.Message}");
+                    }
+                }
             }
         }
 
@@ -94,7 +124,23 @@ namespace GymAPI.Controllers
             }
             catch (Exception ex)
             {
-                return BadRequest(ex.Message);
+                using (var context = new SqlConnection(_connection))
+                {
+                    try
+                    {
+                        var datos = context.Execute("InsertarBitacoraErrores", new
+                        {
+                            Descripcion = ex.Message,
+                            Tipo = "Api"
+                        }, commandType: CommandType.StoredProcedure);
+                        return BadRequest(ex.Message);
+                    }
+                    catch (Exception innerEx)
+                    {
+                        // En caso de que falle la inserción en la bitácora, puedes registrar el error en algún otro lugar o manejarlo adecuadamente.
+                        return BadRequest($"Error al Eliminar Ejercicio en la bitácora: {innerEx.Message}");
+                    }
+                }
             }
         }
 
