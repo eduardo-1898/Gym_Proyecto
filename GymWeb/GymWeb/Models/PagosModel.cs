@@ -22,7 +22,7 @@ namespace GymWeb.Models
             _clientFactory = clientFactory;
         }
 
-        public List<PagosEnt> getPagos(int idUsuario)
+        public List<PagosEnt> getPagos(long idUsuario)
         {
             try
             {

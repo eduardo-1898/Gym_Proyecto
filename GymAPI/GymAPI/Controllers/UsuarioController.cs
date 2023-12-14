@@ -20,6 +20,7 @@ namespace GymAPI.Controllers
         private readonly IConfiguration _configuration;
         private string _connection;
         private readonly IUtils _utils;
+        private readonly IHostEnvironment _hostingEnvironment;
 
         public UsuarioController(IConfiguration configuration, IUtils utils, IHostEnvironment hostingEnvironment)
         {
