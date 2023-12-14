@@ -1,15 +1,21 @@
-﻿using System.Drawing;
+﻿using System.ComponentModel.DataAnnotations;
+using System.Drawing;
 
 namespace GymWeb.Entities
 {
     public class UsuarioEnt
     {
-        public int IdUsuario { get; set; }
+        public long IdUsuario { get; set; }
         public string? Identificacion { get; set; }
         public string? NombreCompleto { get; set; }
         public int IdRol { get; set; }
         public string? NombreRol { get; set; }
+
+        [Required(ErrorMessage = "El campo Correo es obligatorio")]
+        [EmailAddress(ErrorMessage = "Por favor, introduce un correo electrónico válido")]
         public string? Correo { get; set; }
+
+        [Required(ErrorMessage = "El campo Contraseña es obligatorio")]
         public string? contrasenna { get; set; }
         public int Telefono { get; set; }
         public bool? ClaveTemporal { get; set; }
@@ -18,6 +24,8 @@ namespace GymWeb.Entities
         public bool? Estado { get; set; }
         public byte[]? FotoPerfil { get; set; }
         public string? Token { get; set; }
+
+        public string? contrasennaTemporal { get; set; } 
 
     }
 

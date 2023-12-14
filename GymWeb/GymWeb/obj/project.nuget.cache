@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "4yPXvk4/ldtrnzW759J69pI32TolqWJJ1qMXpDBTX1+T41ui7tkqtF7vQJNKOE0vylHAy92IiuK2/030c5ayWQ==",
+  "dgSpecHash": "/M21GAu9mXvclh2NQhIqJAq6vpKh1GlzRBzlOFJmE15tab0SKUitbquMtVtSshMObE7PH2vkhw51RRlJcnCm7Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\Eduardo\\Documents\\GitHub\\Gym_Proyecto\\GymWeb\\GymWeb\\GymWeb.csproj",
   "expectedPackageFiles": [
@@ -89,7 +89,7 @@
     "C:\\Users\\Eduardo\\.nuget\\packages\\microsoft.win32.primitives\\4.3.0\\microsoft.win32.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\Eduardo\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
     "C:\\Users\\Eduardo\\.nuget\\packages\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
-    "C:\\Users\\Eduardo\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\Eduardo\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\Eduardo\\.nuget\\packages\\nuget.common\\6.6.1\\nuget.common.6.6.1.nupkg.sha512",
     "C:\\Users\\Eduardo\\.nuget\\packages\\nuget.configuration\\6.6.1\\nuget.configuration.6.6.1.nupkg.sha512",
     "C:\\Users\\Eduardo\\.nuget\\packages\\nuget.dependencyresolver.core\\6.6.1\\nuget.dependencyresolver.core.6.6.1.nupkg.sha512",

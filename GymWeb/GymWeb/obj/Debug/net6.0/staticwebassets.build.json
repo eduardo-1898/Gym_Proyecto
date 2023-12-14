@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "3cyGTR7qkuTueZJFrpaz1cKY782A5YZsTqZDtFe0TYQ=",
+  "Hash": "06XL06c0ujaVVzUTr865UyU31Hct/erNpcylefhKh70=",
   "Source": "GymWeb",
   "BasePath": "_content/GymWeb",
   "Mode": "Default",
@@ -1528,6 +1528,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\site.js"
+    },
+    {
+      "Identity": "C:\\Users\\Eduardo\\Documents\\GitHub\\Gym_Proyecto\\GymWeb\\GymWeb\\wwwroot\\js\\Utilidades.js",
+      "SourceId": "GymWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Eduardo\\Documents\\GitHub\\Gym_Proyecto\\GymWeb\\GymWeb\\wwwroot\\",
+      "BasePath": "_content/GymWeb",
+      "RelativePath": "js/Utilidades.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\Utilidades.js"
     },
     {
       "Identity": "C:\\Users\\Eduardo\\Documents\\GitHub\\Gym_Proyecto\\GymWeb\\GymWeb\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",

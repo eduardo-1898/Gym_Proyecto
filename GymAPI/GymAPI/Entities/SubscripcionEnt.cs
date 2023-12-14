@@ -2,7 +2,7 @@
 {
     public class SubscripcionEnt
     {
-        public int IdUsuario { get; set; }
+        public long IdUsuario { get; set; }
         public int idPaquete { get; set; }
         public string? Descripcion { get; set; }
         public DateTime FechaCaducidadInscripcion { get; set; }

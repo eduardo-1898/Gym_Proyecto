@@ -349,6 +349,10 @@
       "PackagePath": "staticwebassets\\js\\Perfil\\action.js"
     },
     {
+      "Id": "C:\\Users\\Eduardo\\Documents\\GitHub\\Gym_Proyecto\\GymWeb\\GymWeb\\wwwroot\\js\\Utilidades.js",
+      "PackagePath": "staticwebassets\\js\\Utilidades.js"
+    },
+    {
       "Id": "C:\\Users\\Eduardo\\Documents\\GitHub\\Gym_Proyecto\\GymWeb\\GymWeb\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

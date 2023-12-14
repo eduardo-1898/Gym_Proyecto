@@ -4,6 +4,6 @@ namespace GymWeb.Models
 {
     public interface IPagosModel
     {
-        public List<PagosEnt> getPagos(int idUsuario);
+        public List<PagosEnt> getPagos(long idUsuario);
     }
 }
