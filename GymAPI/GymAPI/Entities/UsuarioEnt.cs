@@ -15,6 +15,7 @@
         public DateTime? FechaCaducidad { get; set; }
         public bool? Estado { get; set; }
         public byte[]? FotoPerfil { get; set; }
+        public string? Token { get; set; }
     }
 
     public class UsuarioEntRespuesta

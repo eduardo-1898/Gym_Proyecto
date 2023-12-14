@@ -16,7 +16,8 @@ namespace GymWeb.Entities
         public DateTime? FechaCreacionUsuario { get; set; }
         public DateTime? FechaCaducidad { get; set; }
         public bool? Estado { get; set; }
-        public byte[] FotoPerfil { get; set; }
+        public byte[]? FotoPerfil { get; set; }
+        public string? Token { get; set; }
 
     }
 

@@ -4,6 +4,7 @@
 @inject IHttpContextAccessor HttpContextAccessor
 @{
     var model = JsonConvert.DeserializeObject<SubscripcionEnt>(HttpContextAccessor.HttpContext.Session.GetString("subscripcion"));
+    var idPaquete = model.idPaquete;
 }
 
 @{
@@ -27,7 +28,7 @@
                     <li>Ingreso completamente digital.</li>
                     <li>Uso de nuestras plataformas digitales.</li>
                 </ul>
-                @if (model == null )
+                @if (model.idPaquete == 0 )
                 {
                     <form action="/create-checkout-session/CreatePlanGold" method="POST">
                         <button type="submit" class="btn btn-dark">Adquiere este plan</button>
@@ -60,7 +61,7 @@
                     <li>Uso de nuestas salas de spa.</li>
                     <li>Uso seguimiento controlado de pesos y mediciones.</li>
                 </ul>
-                @if (model == null)
+                @if (model.idPaquete == 0)
                 {
                     <form action="/create-checkout-session/CreatePlanBlack" method="POST">
                         <button type="submit" class="btn btn-dark">Adquiere este plan</button>
@@ -95,7 +96,7 @@
                     <li>Nutricionista personalidado para tus objetivos.</li>
                     <li>Ayuda de personals trainings 2 veces al mes.</li>
                 </ul>
-                @if (model == null)
+                @if (model.idPaquete == 0)
                 {
                     <form action="/create-checkout-session/CreatePlanPlatinum" method="POST">
                         <button type="submit" class="btn btn-dark">Adquiere este plan</button>

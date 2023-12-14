@@ -5,6 +5,7 @@ using System.Data.Common;
 using System.Data.SqlClient;
 using System.Data;
 using Dapper;
+using Microsoft.AspNetCore.Authorization;
 
 namespace GymAPI.Controllers
 {
@@ -23,6 +24,7 @@ namespace GymAPI.Controllers
 
         [HttpPost]
         [Route("AgregarSubscripcion")]
+        [Authorize]
         public IActionResult AgregarSubscripcion(SubscripcionEnt entidad)
         {
             try
@@ -48,6 +50,7 @@ namespace GymAPI.Controllers
 
         [HttpGet]
         [Route("ObtenerSubscripcion")]
+        [Authorize]
         public IActionResult ObtenerSubscripcion(int idUsuario) {
             try
             {
@@ -57,7 +60,8 @@ namespace GymAPI.Controllers
                     {
                         idUsuario = idUsuario
                     }, commandType: CommandType.StoredProcedure);
-                    return Ok(datos);
+                    var response = datos ?? new SubscripcionEnt();
+                    return Ok(response);
                 }
             }
             catch (Exception ex)

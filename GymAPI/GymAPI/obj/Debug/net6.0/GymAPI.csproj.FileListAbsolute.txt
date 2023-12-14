@@ -76,3 +76,14 @@ C:\Users\Eduardo\Documents\GitHub\Gym_Proyecto\GymAPI\GymAPI\obj\Debug\net6.0\re
 C:\Users\Eduardo\Documents\GitHub\Gym_Proyecto\GymAPI\GymAPI\obj\Debug\net6.0\GymAPI.pdb
 C:\Users\Eduardo\Documents\GitHub\Gym_Proyecto\GymAPI\GymAPI\obj\Debug\net6.0\GymAPI.genruntimeconfig.cache
 C:\Users\Eduardo\Documents\GitHub\Gym_Proyecto\GymAPI\GymAPI\obj\Debug\net6.0\ref\GymAPI.dll
+C:\Users\Eduardo\Documents\GitHub\Gym_Proyecto\GymAPI\GymAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Eduardo\Documents\GitHub\Gym_Proyecto\GymAPI\GymAPI\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\Eduardo\Documents\GitHub\Gym_Proyecto\GymAPI\GymAPI\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Eduardo\Documents\GitHub\Gym_Proyecto\GymAPI\GymAPI\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Eduardo\Documents\GitHub\Gym_Proyecto\GymAPI\GymAPI\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Eduardo\Documents\GitHub\Gym_Proyecto\GymAPI\GymAPI\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Eduardo\Documents\GitHub\Gym_Proyecto\GymAPI\GymAPI\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Eduardo\Documents\GitHub\Gym_Proyecto\GymAPI\GymAPI\bin\Debug\net6.0\Scrutor.dll
+C:\Users\Eduardo\Documents\GitHub\Gym_Proyecto\GymAPI\GymAPI\bin\Debug\net6.0\Swashbuckle.AspNetCore.Filters.dll
+C:\Users\Eduardo\Documents\GitHub\Gym_Proyecto\GymAPI\GymAPI\bin\Debug\net6.0\Swashbuckle.AspNetCore.Filters.Abstractions.dll
+C:\Users\Eduardo\Documents\GitHub\Gym_Proyecto\GymAPI\GymAPI\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll

@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Mvc;
 using System.Data.SqlClient;
 using Dapper;
 using System.Data;
+using GymAPI.Utils;
+using Microsoft.AspNetCore.Authorization;
 
 namespace GymAPI.Controllers
 {
@@ -15,15 +17,18 @@ namespace GymAPI.Controllers
 
         private readonly IConfiguration _configuration;
         private string _connection;
+        private readonly IUtils _utils;
 
-        public UsuarioController(IConfiguration configuration)
+        public UsuarioController(IConfiguration configuration, IUtils utils)
         {
             _configuration = configuration;
             _connection = _configuration.GetConnectionString("DefaultConnection");
+            _utils = utils;
         }
 
         [HttpPost]
         [Route("InicioSesion")]
+        [AllowAnonymous]
         public IActionResult InicioSesion(UsuarioEnt entidad)
         {
             var resultado = new UsuarioEnt();
@@ -45,6 +50,7 @@ namespace GymAPI.Controllers
 
                     respuesta.Codigo = 1;
                     respuesta.Mensaje = "Su usuario fue validado correctamente";
+                    resultado.Token = _utils.GenerarToken(resultado.IdUsuario.ToString(), resultado.IdRol.ToString());
                     respuesta.Objeto = resultado;
                     return Ok(respuesta);
                 }
@@ -61,7 +67,7 @@ namespace GymAPI.Controllers
 
         [HttpPost]
         [Route("RegistrarUsuario")]
-
+        [AllowAnonymous]
         public IActionResult RegistrarUsuario(UsuarioEnt entidad)
         {
             try
@@ -88,6 +94,7 @@ namespace GymAPI.Controllers
 
         [HttpPatch]
         [Route("AgregarFotoPerfil")]
+        [Authorize]
         public IActionResult AgregarFotoPerfil([FromForm] string foto, int id)
         {
             try
@@ -112,6 +119,7 @@ namespace GymAPI.Controllers
 
         [HttpPut]
         [Route("ModificarPerfil")]
+        [Authorize]
         public IActionResult ModificarPerfil(UsuarioEnt entidad) {
             try
             {

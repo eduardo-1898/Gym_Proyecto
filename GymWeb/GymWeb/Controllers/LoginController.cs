@@ -50,10 +50,11 @@ namespace GymWeb.Controllers
                     return View("Login");
                 }
 
-                var subs = _subscripcionModel.getSubscription(datos.Objeto.IdUsuario);
-
                 HttpContext.Session.SetString("RolUsuario", datos.Objeto.NombreRol??"");
+                HttpContext.Session.SetString("Token", datos.Objeto.Token??"");
                 HttpContext.Session.SetString("userInfo",JsonConvert.SerializeObject(datos.Objeto));
+
+                var subs = _subscripcionModel.getSubscription(datos.Objeto.IdUsuario);
                 HttpContext.Session.SetString("subscripcion",JsonConvert.SerializeObject(subs));
 
                 return RedirectToAction("Index", "Home");

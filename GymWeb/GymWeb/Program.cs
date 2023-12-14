@@ -1,6 +1,7 @@
 using GymWeb.Config;
 using GymWeb.Models;
 using Stripe;
+using System.Globalization;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,7 +13,13 @@ builder.Services.AddSession();
 builder.Services.AddHttpClient();
 builder.Services.AddSingleton<IUsuarioModel, UsuarioModel>();
 builder.Services.AddSingleton<ISubscripcionModel, SubscripcionModel>();
+builder.Services.AddSingleton<IPagosModel, PagosModel>();
 builder.Services.AddHttpContextAccessor();
+
+builder.Services.AddHttpClient("GYMPRO_Client").ConfigurePrimaryHttpMessageHandler(_ => new HttpClientHandler
+{
+    ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => { return true; }
+});
 
 
 builder.Services.AddSession(options =>
@@ -33,11 +40,21 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
+var supportedCultures = new[]
+{
+    new CultureInfo("es-CR")
+};
+
+app.UseRequestLocalization(new RequestLocalizationOptions
+{
+    DefaultRequestCulture = new Microsoft.AspNetCore.Localization.RequestCulture("es-CR"),
+    SupportedCultures = supportedCultures,
+    SupportedUICultures = supportedCultures
+});
+
 app.UseHttpsRedirection();
 app.UseStaticFiles();
-
 app.UseRouting();
-
 app.UseAuthorization();
 app.UseSession();
 
