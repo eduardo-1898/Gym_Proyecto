@@ -16,6 +16,8 @@ builder.Services.AddSingleton<ISubscripcionModel, SubscripcionModel>();
 builder.Services.AddSingleton<IPagosModel, PagosModel>();
 builder.Services.AddSingleton<IEntrenadorModel, EntrenadorModel>();
 builder.Services.AddSingleton<IEjercicioModel, EjercicioModel>();
+builder.Services.AddSingleton<IRutinasModel, RutinasModel>();
+builder.Services.AddSingleton<IRutinasDetalleModel, RutinasDetalleModel>();
 
 
 builder.Services.AddHttpContextAccessor();
