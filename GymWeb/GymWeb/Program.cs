@@ -14,6 +14,10 @@ builder.Services.AddHttpClient();
 builder.Services.AddSingleton<IUsuarioModel, UsuarioModel>();
 builder.Services.AddSingleton<ISubscripcionModel, SubscripcionModel>();
 builder.Services.AddSingleton<IPagosModel, PagosModel>();
+builder.Services.AddSingleton<IEntrenadorModel, EntrenadorModel>();
+builder.Services.AddSingleton<IEjercicioModel, EjercicioModel>();
+
+
 builder.Services.AddHttpContextAccessor();
 
 builder.Services.AddHttpClient("GYMPRO_Client").ConfigurePrimaryHttpMessageHandler(_ => new HttpClientHandler

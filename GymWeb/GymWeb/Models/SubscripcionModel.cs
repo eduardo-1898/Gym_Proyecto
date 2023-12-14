@@ -56,7 +56,7 @@ namespace GymWeb.Models
             }
         }
 
-        public SubscripcionEnt getSubscription(int idUsuario) {
+        public SubscripcionEnt getSubscription(long idUsuario) {
             try
             {
                 string token = _HttpContextAccessor.HttpContext.Session.GetString("Token");

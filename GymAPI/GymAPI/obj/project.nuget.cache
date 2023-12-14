@@ -2,7 +2,7 @@
   "version": 2,
   "dgSpecHash": "KKuNxNZW3uLqgaPsthj1GTqt9/61WnOJSJiX2AP7LwnjvGZZkCsUq9MPG8MzrUG90IL912De9G+44ffF6r52RA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Eduardo\\Documents\\GitHub\\Gym_Proyecto\\GymAPI\\GymAPI\\GymAPI.csproj",
+  "projectFilePath": "C:\\Users\\varga\\OneDrive\\Documentos\\Fidelitas\\Programacion Web Avanzada\\Gym_Proyecto\\GymAPI\\GymAPI\\GymAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Eduardo\\.nuget\\packages\\dapper\\2.1.4\\dapper.2.1.4.nupkg.sha512",
     "C:\\Users\\Eduardo\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.3\\microsoft.aspnetcore.authentication.jwtbearer.6.0.3.nupkg.sha512",

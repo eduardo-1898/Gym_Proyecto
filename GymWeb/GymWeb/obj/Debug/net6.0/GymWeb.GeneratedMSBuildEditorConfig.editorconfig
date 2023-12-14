@@ -16,12 +16,32 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Eduardo\Documents\GitHub\Gym_Proyecto\GymWeb\GymWeb
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/Eduardo/Documents/GitHub/Gym_Proyecto/GymWeb/GymWeb/Views/Ejercicio/ConsultarEjercicio.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRWplcmNpY2lvXENvbnN1bHRhckVqZXJjaWNpby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Eduardo/Documents/GitHub/Gym_Proyecto/GymWeb/GymWeb/Views/Ejercicio/CrearEjercicio.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRWplcmNpY2lvXENyZWFyRWplcmNpY2lvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Eduardo/Documents/GitHub/Gym_Proyecto/GymWeb/GymWeb/Views/Entrenador/CrearCita.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW50cmVuYWRvclxDcmVhckNpdGEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Eduardo/Documents/GitHub/Gym_Proyecto/GymWeb/GymWeb/Views/Entrenador/EditarCitas.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW50cmVuYWRvclxFZGl0YXJDaXRhcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Eduardo/Documents/GitHub/Gym_Proyecto/GymWeb/GymWeb/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Eduardo/Documents/GitHub/Gym_Proyecto/GymWeb/GymWeb/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Eduardo/Documents/GitHub/Gym_Proyecto/GymWeb/GymWeb/Views/Login/CambiarClaveCuenta.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cQ2FtYmlhckNsYXZlQ3VlbnRhLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Eduardo/Documents/GitHub/Gym_Proyecto/GymWeb/GymWeb/Views/Login/Login.cshtml]

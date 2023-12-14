@@ -64,19 +64,20 @@
                     <p class="mb-4">Has que tus sueños se cumplan!</p>
 
                     @*  Inicio del form *@
-                    @using (Html.BeginForm("RegistrarUsuario", "Login", FormMethod.Post, new { @class = "pt-3" }))
+                    @using (Html.BeginForm("RegistrarUsuario", "Login", FormMethod.Post, new { id = "registroUsuario", @class = "pt-3" }))
                     {
                         <div class="mb-3">
                             <label class="form-label" >Identificacion</label>
-                            @Html.TextBoxFor(m=> m.Identificacion, new {@class="form-control form-control-lg",@type="text",@placeholder="Identificacion"})
+                            @Html.TextBoxFor(m=> m.Identificacion, new {@onkeyup="ConsultarNombre()", @class="form-control form-control-lg",@type="text",@placeholder="Identificacion"})
                         </div>
                         <div class="mb-3">
                             <label class="form-label" >Nombre Completo</label>
-                            @Html.TextBoxFor(m=> m.NombreCompleto, new {@class="form-control form-control-lg",@type="text",@placeholder="Nombre"})
+                            @Html.TextBoxFor(m=> m.NombreCompleto, new {@readOnly="readOnly", @class="form-control form-control-lg",@type="text",@placeholder="Nombre"})
                         </div>
                         <div class="mb-3">
                             <label  class="form-label">Correo</label>
                             @Html.TextBoxFor(m=> m.Correo, new {@class="form-control form-control-lg",@type="email",@placeholder="Correo Electronico"})
+                            @Html.ValidationMessageFor(m => m.Correo, "", new { @class = "text-danger" })
                         </div>
                         <div class="mb-3">
                             <label  class="form-label">Telefono</label>
@@ -85,9 +86,11 @@
                         <div class="mb-3 form-password-toggle">
                             <label class="form-label" for="password">Contraseña</label>
                             <div class="input-group input-group-merge">
-                                @Html.TextBoxFor(m=> m.contrasenna, new {@class="form-control form-control-lg",@type="password",@placeholder="Contraseña"})
+                                @Html.TextBoxFor(m=> m.contrasenna, new {@class="form-control form-control-lg",@type="password",@placeholder="Contraseña"})                          
                                 <span class="input-group-text cursor-pointer"><i class="bx bx-hide"></i></span>
+                         
                             </div>
+                            @Html.ValidationMessageFor(m => m.contrasenna, "", new { @class = "text-danger" })
                         </div>
 
                         
@@ -104,4 +107,64 @@
         </div>
     </div>
 </div>
+
+
+<script src="~/js/Utilidades.js"></script>
+
+@section scripts {
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+
+        $(document).ready(function () {
+            $("#registroUsuario").submit(function (event) {
+                event.preventDefault();
+
+                var formData = $(this).serialize();
+
+                $.ajax({
+                    url: "/Login/RegistrarUsuario",
+                    type: "POST",
+                    data: formData,
+                    success: function (data) {
+                        if (data && data.success) {
+                            showSuccessAlert("Cuenta creada correctamente");
+                            setTimeout(function () {
+                                window.location.href = data.redirectUrl;
+                            }, 1500);
+                        } else {
+                            showErrorAlert(data.errorMessage || "Ha ocurrido un error al procesar la solicitud de registro de usuario");
+                        }
+                    },
+                    error: function (xhr, status, error) {
+                        showErrorAlert("Ha ocurrido un error al procesar la solicitud de registro de usuario");
+                        console.log("Error en la solicitud Ajax:", status, error);
+                    }
+                });
+            });
+
+            function showSuccessAlert(message) {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Éxito',
+                    text: message,
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+            }
+
+            function showErrorAlert(errorMessage) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error',
+                    text: errorMessage,
+                    confirmButtonColor: '#3085d6',
+                    confirmButtonText: 'OK'
+                });
+            }
+        });
+
+
+
+    </script>
+}
 
